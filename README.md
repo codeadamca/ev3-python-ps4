@@ -87,13 +87,13 @@ Reacting to an event would look like this:
 
 ```python
 # If a button was pressed or released
-    if ev_type == 1:
+if ev_type == 1:
 
-        # React to the X button
-        if code == 304 and value == 0:
-            print("The X button was released")
-        elif code == 304 and value == 1:
-            print("The X button was pressed")
+    # React to the X button
+    if code == 304 and value == 0:
+        print("The X button was released")
+    elif code == 304 and value == 1:
+        print("The X button was pressed")
 ```
 
 This is assuming the events file has been opened and a while loop has been initiated (see main.py or tank.py).

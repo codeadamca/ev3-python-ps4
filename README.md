@@ -16,12 +16,36 @@ Using a terminal check out the contents of the /dev/input folder before and afte
 
 Each event provides five values, but we only need the event ID, code, and value. Here is a list of all events I could find:
 
-** Touchpad Events
+## Button and Stick Events
 
-For me touchpad events were found in /dev/input/event2.
+For me button and stick events were found in /dev/input/event4. If you're working on a PS4 project, these are probably the events you're looking for.
 
 <table>
-<tr><th>Event</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>
+<tr><th>Event</th><th>ID</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>
+<tr><td>X Button</td><td>1</td><td>304</td><td>
+<tr><td>Circle Button</td><td>1</td><td>305</td><td>
+<tr><td>Triangle Burron</td><td>1</td><td>307</td><td>
+<tr><td>Square Button</td><td>1</td><td>308</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Share Button</td><td>1</td><td>314</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Options Button</td><td>1</td><td>315</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>PS Button</td><td>1</td><td>316</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Left Stick Push</td><td>1</td><td>317</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Right Stick Push</td><td>1</td><td>318</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>L1</td><td>1</td><td>310</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>R1</td><td>1</td><td>311</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>L2</td><td>1</td><td>312</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>R2</td><td>1</td><td>313</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+</table>
+--------------
+Event 3:
+LEFT HORIZONTAL AXIS - 0 - 0 (top) to 255 (bottom) 
+LEFT VERT AXIS - 1 - 0 (top) to 255 (bottom) 
+L2 AXIS - 2 - 0 (released) to 255 (pushed) 
+RIGHT HORIZONTAL AXIS - 3 - 0 (top) to 255 (bottom) 
+RIGHT VERT AXIS - 4 - 0 (top) to 255 (bottom) 
+R2 AXIS - 5 - 0 (released) to 255 (pushed) 
+DIR HORIZONTAL - 16 - 1 (left), 0 (released), -1 (right)
+DIR HORIZONTAL - 17 - 1 (left), 0 (released), -1 (right)
 </table>
 
 <a href="https://codeadam.ca">

@@ -35,16 +35,30 @@ For me button and stick events were found in /dev/input/event4. If you're workin
 <tr><td>R1</td><td>4</td><td>311</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
 <tr><td>L2</td><td>4</td><td>312</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
 <tr><td>R2</td><td>4</td><td>313</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Left Stick Horizontal Axis</td><td>3</td><td>0</td><td>0 to 255</td><td>0 Left/127 Middle/255 Right</td></tr>
+<tr><td>Left Stick Vertical Axis</td><td>3</td><td>1</td><td>0 to 255</td><td>0 Top/127 Middle/255 Bottom</td></tr>
+<tr><td>L2 Axis</td><td>3</td><td>2</td><td>0 to 255</td><td>0 Released/255 Completely Pressed</td></tr>
+<tr><td>Right Stick Horizontal Axis</td><td>3</td><td>3</td><td>0 to 255</td><td>0 Left/127 Middle/255 Right</td></tr>
+<tr><td>Right Stick Vertical Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 Top/127 Middle/255 Bottom</td></tr>
+<tr><td>R2 Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 to 255</td><td>0 Left/127 Middle/255 Right</td></tr>
+<tr><td>Directional Pad Horizontal</td><td>3</td><td>16</td><td>-1, 0 or 1</td><td>-1 Right/0 Released, 1 Left</td></tr>
+<tr><td>Directional Pad Vertical</td><td>3</td><td>17</td><td>-1, 0 or 1</td><td>-1 Right/0 Released, 1 Left</td></tr>
+</table>
 
-<tr><td>Left Stick Horizontal Axis</td><td>3</td><td>0</td><td>0 to 255</td><td>0 (left) to 255 (right)</td></tr>
-<tr><td>Left Stick Vertical Axis</td><td>3</td><td>1</td><td>0 to 255</td><td>0 (top) to 255 (bottom)</td></tr>
-<tr><td>L2 Axis</td><td>3</td><td>2</td><td>0 to 255</td><td>0 (released) to 255 (pressed all the way)</td></tr>
+Note that the left and right sticks often trigger ongoing events if the controller has any drift. My controller would continuously send events for left horizontal stick movememt alternating between 127 and 128. 
 
-<tr><td>Right Stick Horizontal Axis</td><td>3</td><td>3</td><td>0 to 255</td><td>0 (left) to 255 (right)</td></tr>
-<tr><td>Right Stick Vertical Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 (top) to 255 (bottom)</td></tr>
-<tr><td>R2 Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 (released) to 255 (pressed all the way)</td></tr>
-<tr><td>Directional Pad Horizontal</td><td>3</td><td>16</td><td>-1, 0 or 1</td><td>-1 (right), 0 (released), 1 (left)</td></tr>
-<tr><td>Directional Pad Vertical</td><td>3</td><td>17</td><td>-1, 0 or 1</td><td>-1 (right), 0 (released), 1 (left)</td></tr>
+## Controller Movement
+
+These events are triggered by physically moving or tilting the controller. I'm not as confident with these. I could not tell the difference with events one and two. 
+
+<table>
+<tr><th>Event</th><th>ID</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>
+<tr><td>Left/Right Tilt</td><td>3</td><td>0</td><td>8192 to -8192</td><td>8192 Tilted as Far Left/0 No Tilt/-8192 Tilted As Far Right</td></tr>
+<tr><td>Towards/Away Tilt</td><td>3</td><td>1</td><td>8192 to -8192</td><td>8192 Tilted as Far Towards/0 No Tilt/-8192 Tilted As Far Away</td></tr>
+<tr><td>Towards/Away Tilt</td><td>3</td><td>2</td><td>8192 to -8192</td><td>8192 Tilted as Far Towards/0 No Tilt/-8192 Tilted As Far Away</td></tr>
+<tr><td>Vertical Speed</td><td>3</td><td>3</td><td>Any Number</td><td>Negative is Down, Positive is Up</td></tr>
+<tr><td>Accelleration</td><td>3</td><td>4</td><td>Any Number</td><td>Negative is Slowing Down, Positive is Speeding Up</td></tr>
+<tr><td>Timer</td><td>4</td><td>5</td><td>Any Positive Number</td><td>This seems to be the time in micro seconds that the controller has been turned on</td></tr>
 </table>
 
 <a href="https://codeadam.ca">

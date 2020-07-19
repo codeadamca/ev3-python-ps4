@@ -22,30 +22,29 @@ For me button and stick events were found in /dev/input/event4. If you're workin
 
 <table>
 <tr><th>Event</th><th>ID</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>
-<tr><td>X Button</td><td>1</td><td>304</td><td>
-<tr><td>Circle Button</td><td>1</td><td>305</td><td>
-<tr><td>Triangle Burron</td><td>1</td><td>307</td><td>
-<tr><td>Square Button</td><td>1</td><td>308</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>Share Button</td><td>1</td><td>314</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>Options Button</td><td>1</td><td>315</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>PS Button</td><td>1</td><td>316</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>Left Stick Push</td><td>1</td><td>317</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>Right Stick Push</td><td>1</td><td>318</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>L1</td><td>1</td><td>310</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>R1</td><td>1</td><td>311</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>L2</td><td>1</td><td>312</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-<tr><td>R2</td><td>1</td><td>313</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
-</table>
---------------
-Event 3:
-LEFT HORIZONTAL AXIS - 0 - 0 (top) to 255 (bottom) 
-LEFT VERT AXIS - 1 - 0 (top) to 255 (bottom) 
-L2 AXIS - 2 - 0 (released) to 255 (pushed) 
-RIGHT HORIZONTAL AXIS - 3 - 0 (top) to 255 (bottom) 
-RIGHT VERT AXIS - 4 - 0 (top) to 255 (bottom) 
-R2 AXIS - 5 - 0 (released) to 255 (pushed) 
-DIR HORIZONTAL - 16 - 1 (left), 0 (released), -1 (right)
-DIR HORIZONTAL - 17 - 1 (left), 0 (released), -1 (right)
+<tr><td>X Button</td><td>4</td><td>304</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Circle Button</td><td>4</td><td>305</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Triangle Burron</td><td>4</td><td>307</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Square Button</td><td>4</td><td>308</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Share Button</td><td>4</td><td>314</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Options Button</td><td>4</td><td>315</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>PS Button</td><td>4</td><td>316</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Left Stick Push</td><td>4</td><td>317</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Right Stick Push</td><td>4</td><td>318</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>L1</td><td>4</td><td>310</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>R1</td><td>4</td><td>311</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>L2</td><td>4</td><td>312</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>R2</td><td>4</td><td>313</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+
+<tr><td>Left Stick Horizontal Axis</td><td>3</td><td>0</td><td>0 to 255</td><td>0 (left) to 255 (right)</td></tr>
+<tr><td>Left Stick Vertical Axis</td><td>3</td><td>1</td><td>0 to 255</td><td>0 (top) to 255 (bottom)</td></tr>
+<tr><td>L2 Axis</td><td>3</td><td>2</td><td>0 to 255</td><td>0 (released) to 255 (pressed all the way)</td></tr>
+
+<tr><td>Right Stick Horizontal Axis</td><td>3</td><td>3</td><td>0 to 255</td><td>0 (left) to 255 (right)</td></tr>
+<tr><td>Right Stick Vertical Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 (top) to 255 (bottom)</td></tr>
+<tr><td>R2 Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 (released) to 255 (pressed all the way)</td></tr>
+<tr><td>Directional Pad Horizontal</td><td>3</td><td>16</td><td>-1, 0 or 1</td><td>-1 (right), 0 (released), 1 (left)</td></tr>
+<tr><td>Directional Pad Vertical</td><td>3</td><td>17</td><td>-1, 0 or 1</td><td>-1 (right), 0 (released), 1 (left)</td></tr>
 </table>
 
 <a href="https://codeadam.ca">

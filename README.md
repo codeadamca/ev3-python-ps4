@@ -40,7 +40,7 @@ For me button and stick events were found in /dev/input/event4. If you're workin
 <tr><td>L2 Axis</td><td>3</td><td>2</td><td>0 to 255</td><td>0 Released/255 Completely Pressed</td></tr>
 <tr><td>Right Stick Horizontal Axis</td><td>3</td><td>3</td><td>0 to 255</td><td>0 Left/127 Middle/255 Right</td></tr>
 <tr><td>Right Stick Vertical Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 Top/127 Middle/255 Bottom</td></tr>
-<tr><td>R2 Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 to 255</td><td>0 Left/127 Middle/255 Right</td></tr>
+<tr><td>R2 Axis</td><td>3</td><td>4</td><td>0 to 255</td><td>0 Left/127 Middle/255 Right</td></tr>
 <tr><td>Directional Pad Horizontal</td><td>3</td><td>16</td><td>-1, 0 or 1</td><td>-1 Right/0 Released, 1 Left</td></tr>
 <tr><td>Directional Pad Vertical</td><td>3</td><td>17</td><td>-1, 0 or 1</td><td>-1 Right/0 Released, 1 Left</td></tr>
 </table>
@@ -49,7 +49,7 @@ Note that the left and right sticks often trigger ongoing events if the controll
 
 ## Controller Movement
 
-These events are triggered by physically moving or tilting the controller. I'm not as confident with these. I could not tell the difference with events one and two. 
+These events are triggered by physically moving or tilting the controller. I'm not as confident with these. I could not tell the difference with codes one and two. 
 
 <table>
 <tr><th>Event</th><th>ID</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>
@@ -59,6 +59,22 @@ These events are triggered by physically moving or tilting the controller. I'm n
 <tr><td>Vertical Speed</td><td>3</td><td>3</td><td>Any Number</td><td>Negative is Down, Positive is Up</td></tr>
 <tr><td>Accelleration</td><td>3</td><td>4</td><td>Any Number</td><td>Negative is Slowing Down, Positive is Speeding Up</td></tr>
 <tr><td>Timer</td><td>4</td><td>5</td><td>Any Positive Number</td><td>This seems to be the time in micro seconds that the controller has been turned on</td></tr>
+</table>
+
+## Touch Pad Events
+
+These events are triggered by using or pressing the touchpad on the PS4 controller. I could not figure out the difference between code 252 and 230 or 333 and 47. 
+
+<table>
+<tr><th>Event</th><th>ID</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>
+<tr><td>Touchpad Press</td><td>1</td><td>272</td><td>0 or 1</td><td>0 Released/1 Pressed</td></tr>
+<tr><td>Touchpad Touch</td><td>1</td><td>325</td><td>0 or 1</td><td>0 Finger Removed/1 Finger Touched</td></tr>
+<tr><td>Touchpad Touch</td><td>1</td><td>330</td><td>0 or 1</td><td>0 Finger Removed/1 Finger Touched</td></tr>
+<tr><td>Two Finger Touch</td><td>1</td><td>333</td><td>0 or 1</td><td>0 Second Finger Removed/1 Second Finger Touched</td></tr>
+<tr><td>Two Finger Touch</td><td>3</td><td>47</td><td>0 or 1</td><td>0 Second Finger Removed/1 Second Finger Touched</td></tr>
+<tr><td>Touchpad X</td><td>3</td><td>53</td><td>1 to 1919</td><td>Horizontal location of the finger, 0 Left/1919 Right</td></tr>
+<tr><td>Touchpad Y</td><td>3</td><td>54</td><td>1 to 941</td><td>Vertical location of the finger, 0 Top/941 Bottom</td></tr>
+<tr><td>Touch Counter</td><td>3</td><td>57</td><td>Any Positive Number</td><td>0+ The number of times the touch pas has been touched/-1 Not currently touched</td></tr>
 </table>
 
 <a href="https://codeadam.ca">

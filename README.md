@@ -96,7 +96,7 @@ if ev_type == 1:
         print("The X button was pressed")
 ```
 
-This is assuming the events file has been opened and a while loop has been initiated (see main.py or tank.py).
+This is assuming the events file has been opened and a while loop has been initiated (see [main.py](main.py) or [tank.py](tank.py)).
 
 <a href="https://codeadam.ca">
 <img src="https://codeadam.ca/images/code-block.png" width="100">

@@ -1,5 +1,5 @@
 # python-connect-ps4
-Using Python to connect to a PS4 and a map of all identified events.
+A basic snippet to use vanillia Python to react to a PS4 controller events.
 
 This code was written to connect a LEGO EV3 Brick to a PS4 controller. The EV3 is running [ev3dev](https://www.ev3dev.org/) and running a version of Python called [Pybricks](https://github.com/pybricks/pybricks-micropython). However, the code reacting to the PS4 controller events and the mapping of different buttons should apply to any Python/PS4 project.
 
@@ -11,14 +11,14 @@ When the PS4 is paried with the device it creates three event files. These files
 Using a terminal check out the contents of the /dev/input folder before and after you pair the Bluetooth device. You should notice three new event files. On my device these files where:
 
 * /dev/input/event2 (touchpad events)
-* /dev/input/event3 (controller movement, like tilting, etc...)
+* /dev/input/event3 (controller movement, like tilting, shaking, etc...)
 * /dev/input/event4 (buttons, sticks, etc...)
 
-Each event provides five values, but we only need the event ID, code, and value. Here is a list of all events I could find:
+Each event provides five values, but we only need the event ID, code, and value. Here is a list of all events I could map:
 
 ## Button and Stick Events
 
-For me button and stick events were found in /dev/input/event4. If you're working on a PS4 project, these are probably the events you're looking for.
+With my device, the button and stick events were found in /dev/input/event4. If you're working on a PS4 project, these are probably the events you're looking for.
 
 <table>
 <tr><th>Event</th><th>ID</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>
@@ -49,6 +49,8 @@ Note that the left and right sticks often trigger ongoing events if the controll
 
 ## Controller Movement
 
+Movement events were found in /dev/input/event3.
+
 These events are triggered by physically moving or tilting the controller. I'm not as confident with these. I could not tell the difference with codes one and two. 
 
 <table>
@@ -63,7 +65,9 @@ These events are triggered by physically moving or tilting the controller. I'm n
 
 ## Touch Pad Events
 
-These events are triggered by using or pressing the touchpad on the PS4 controller. I could not figure out the difference between code 252 and 230 or 333 and 47. 
+Movement events were found in /dev/input/event2.
+
+These events are triggered by using or pressing the touchpad on the PS4 controller. I could not figure out the difference between codes 252 and 230 or 333 and 47.
 
 <table>
 <tr><th>Event</th><th>ID</th><th>Code</th><th>Possible Values</th><th>Description</th></tr>

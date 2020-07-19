@@ -81,6 +81,23 @@ These events are triggered by using or pressing the touchpad on the PS4 controll
 <tr><td>Touch Counter</td><td>3</td><td>57</td><td>Any Positive Number</td><td>0+ The number of times the touch pas has been touched/-1 Not currently touched</td></tr>
 </table>
 
+## Sample Code
+
+Reacting to an event would look like this:
+
+'''python
+# If a button was pressed or released
+    if ev_type == 1:
+
+        # React to the X button
+        if code == 304 and value == 0:
+            print("The X button was released")
+        elif code == 304 and value == 1:
+            print("The X button was pressed")
+'''
+
+This is assuming the events file has been opened and a while loop has been initiated (see main.py or tank.py).
+
 <a href="https://codeadam.ca">
 <img src="https://codeadam.ca/images/code-block.png" width="100">
 </a>

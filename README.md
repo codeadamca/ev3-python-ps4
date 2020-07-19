@@ -85,7 +85,7 @@ These events are triggered by using or pressing the touchpad on the PS4 controll
 
 Reacting to an event would look like this:
 
-'''python
+```python
 # If a button was pressed or released
     if ev_type == 1:
 
@@ -94,7 +94,7 @@ Reacting to an event would look like this:
             print("The X button was released")
         elif code == 304 and value == 1:
             print("The X button was pressed")
-'''
+```
 
 This is assuming the events file has been opened and a while loop has been initiated (see main.py or tank.py).
 

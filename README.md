@@ -1,4 +1,5 @@
-# ev3-python-ps4
+# LEGO Mindstorms EV3, Pthon, and a PS4 Controller
+
 A basic snippet to use vanillia Python to react to a PS4 controller events.
 
 This code was written to connect a LEGO EV3 Brick to a PS4 controller. The EV3 is running [ev3dev](https://www.ev3dev.org/) and running a version of Python called [Pybricks](https://github.com/pybricks/pybricks-micropython). However, the code reacting to the PS4 controller events and the mapping of different buttons should apply to any Python/PS4 project.

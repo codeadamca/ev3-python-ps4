@@ -99,6 +99,13 @@ if ev_type == 1:
 
 This is assuming the events file has been opened and a while loop has been initiated (see [main.py](main.py) or [tank.py](tank.py)).
 
+---
+
+## Repo Resources
+
+- [Pybricks](https://docs.pybricks.com/en/latest/ev3devices.html)
+- [Python for EV3](https://education.lego.com/en-us/product-resources/mindstorms-ev3/teacher-resources/python-for-ev3)
+
 <a href="https://codeadam.ca">
 <img src="https://codeadam.ca/images/code-block.png" width="100">
 </a>

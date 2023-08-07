@@ -1,4 +1,4 @@
-# LEGO Mindstorms EV3, Pthon, and a PS4 Controller
+# LEGO® Mindstorms® EV3, Pthon, and a PS4 Controller
 
 A basic snippet to use vanillia Python to react to a PS4 controller events.
 
